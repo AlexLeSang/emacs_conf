@@ -1,0 +1,17 @@
+;; Object clang/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "clang/"
+  :tables
+  (list
+    (semanticdb-table "test.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20]))          
+      :file "test.cpp"
+      :pointmax 23
+      :fsize 22
+      :lastmodtime '(22097 40225 561347 750000)
+      :unmatched-syntax nil))
+  :file "!home!halushko!.emacs.d!clang!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

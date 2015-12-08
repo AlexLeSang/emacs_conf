@@ -1,0 +1,1590 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "Constants.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("QTCGTESTCONSTANTS_H" variable (:constant-flag t) nil [37 56])
+            ("QColor" include (:system-flag t) nil [58 75])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Constants" type
+                       (:members 
+                          ( ("MENU_ID" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :default-value "\"QtcGtest.Menu\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [127 166])
+                            ("ACTION_CHECK_PROJECT_ID" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :default-value "\"QtcGtest.CheckActiveProject\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [171 240])
+                            ("ACTION_CHECK_CURRENT_ID" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :default-value "\"QtcGtest.CheckCurrent\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [245 308])
+                            ("ACTION_CHECK_CHANGED_ID" variable
+                               (:dereference 1
+                                :constant-flag t
+                                :default-value "\"QtcGtest.CheckChanged\""
+                                :type "char")
+                                (reparse-symbol namespacesubparts) [313 376])
+                            ("goodColor" variable
+                               (:constant-flag t
+                                :default-value "QColor (\"#129E2E\")"
+                                :type ("QColor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [382 426])
+                            ("badColor" variable
+                               (:constant-flag t
+                                :default-value "QColor (\"#C71919\")"
+                                :type ("QColor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [431 474])
+                            ("noteColor" variable
+                               (:constant-flag t
+                                :default-value "QColor (\"#C4AC40\")"
+                                :type ("QColor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [479 523])
+                            ("textColor" variable
+                               (:constant-flag t
+                                :default-value "QColor (\"#000000\")"
+                                :type ("QColor" type (:type "class") nil nil))
+                                (reparse-symbol namespacesubparts) [528 572]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [100 577]))                  
+                :type "namespace")
+                nil [77 601]))          
+      :file "Constants.h"
+      :pointmax 657
+      :fsize 656
+      :lastmodtime '(22060 19975 27432 185000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("QTCGTESTCONSTANTS_H")
+          )
+)
+    (semanticdb-table "OutputPane.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QFileInfo" include (:system-flag t) nil [1 21])
+            ("coreplugin/editormanager/editormanager.h" include (:system-flag t) nil [23 74])
+            ("projectexplorer/runconfiguration.h" include (:system-flag t) nil [75 120])
+            ("projectexplorer/target.h" include (:system-flag t) nil [121 156])
+            ("projectexplorer/buildconfiguration.h" include (:system-flag t) nil [157 204])
+            ("OutputPane.h" include nil nil [206 229])
+            ("OutputParser.h" include nil nil [230 255])
+            ("PaneWidget.h" include nil nil [256 279])
+            ("TestModel.h" include nil nil [280 302])
+            ("ParseState.h" include nil nil [303 326])
+            ("Constants.h" include nil nil [327 349])
+            ("iostream" include (:system-flag t) nil [351 370])
+            ("unnamed" type
+               (:members 
+                  ( ("testPathVariable" variable
+                       (:typemodifiers ("static")
+                        :constant-flag t
+                        :default-value "QStringLiteral(\"QTC_GTEST_ROOT\")"
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [386 459]))                  
+                :type "namespace")
+                nil [372 461])
+            ("QtcGtest::Internal" using (:type ("QtcGtest::Internal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [464 499])
+            ("togglePassedButton_" function
+               (:arguments 
+                  ( ("" variable (:type ("QToolButton" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [794 806]))                  
+                :type "int")
+                nil [769 1299])
+            ("OutputPane" function
+               (:destructor-flag t
+                :parent "OutputPane"
+                :type "void")
+                nil [1301 1472])
+            ("outputWidget" function
+               (:pointer 1
+                :parent "OutputPane"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1508 1524]))                  
+                :type ("QWidget" type (:type "class") nil nil))
+                nil [1474 1894])
+            ("toolBarWidgets" function
+               (:parent "OutputPane"
+                :type ("QList" type
+                     (:template-specifier 
+                        ( ("QWidget" type (:pointer 1) nil nil))                        
+                      :type "class")
+                      nil nil))
+                nil [1896 2086])
+            ("displayName" function
+               (:parent "OutputPane"
+                :type ("QString" type (:type "class") nil nil))
+                nil [2088 2160])
+            ("priorityInStatusBar" function
+               (:parent "OutputPane"
+                :type "int")
+                nil [2162 2222])
+            ("clearContents" function
+               (:parent "OutputPane"
+                :type "void")
+                nil [2224 2334])
+            ("visibilityChanged" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("visible" variable (:type "bool") (reparse-symbol arg-sub-list) [2371 2384]))                  
+                :type "void")
+                nil [2336 2388])
+            ("setFocus" function
+               (:parent "OutputPane"
+                :type "void")
+                nil [2390 2481])
+            ("hasFocus" function
+               (:parent "OutputPane"
+                :type "bool")
+                nil [2483 2603])
+            ("canFocus" function
+               (:parent "OutputPane"
+                :type "bool")
+                nil [2605 2673])
+            ("canNavigate" function
+               (:parent "OutputPane"
+                :type "bool")
+                nil [2675 2730])
+            ("canNext" function
+               (:parent "OutputPane"
+                :type "bool")
+                nil [2732 2921])
+            ("canPrevious" function
+               (:parent "OutputPane"
+                :type "bool")
+                nil [2923 3116])
+            ("goToNext" function
+               (:parent "OutputPane"
+                :type "void")
+                nil [3118 3311])
+            ("goToPrev" function
+               (:parent "OutputPane"
+                :type "void")
+                nil [3313 3510])
+            ("showError" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("errorIndex" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3539 3569]))                  
+                :type "void")
+                nil [3512 3931])
+            ("handleViewClicked" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [3968 3993]))                  
+                :type "void")
+                nil [3933 4509])
+            ("handleRunStart" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("control" variable
+                       (:pointer 1
+                        :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [4543 4580]))                  
+                :type "void")
+                nil [4511 5405])
+            ("handleRunFinish" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("control" variable
+                       (:pointer 1
+                        :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [5441 5478]))                  
+                :type "void")
+                nil [5407 6698])
+            ("parseMessage" function
+               (:parent "OutputPane"
+                :arguments 
+                  ( ("control" variable
+                       (:pointer 1
+                        :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6730 6767])
+                    ("msg" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [6768 6787])
+                    ("format" variable (:type ("Utils::OutputFormat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [6788 6815]))                  
+                :type "void")
+                nil [6700 7335]))          
+      :file "OutputPane.cpp"
+      :pointmax 7336
+      :fsize 7335
+      :lastmodtime '(22060 21832 911818 916000)
+      :unmatched-syntax nil)
+    (semanticdb-table "OutputPane.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OUTPUTPANE_H" variable (:constant-flag t) nil [30 42])
+            ("QLabel" include (:system-flag t) nil [44 61])
+            ("QPointer" include (:system-flag t) nil [62 81])
+            ("QToolButton" include (:system-flag t) nil [82 104])
+            ("coreplugin/ioutputpane.h" include (:system-flag t) nil [106 141])
+            ("utils/outputformat.h" include (:system-flag t) nil [142 173])
+            ("ProjectExplorer" type
+               (:members 
+                  ( ("RunControl" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [205 222]))                  
+                :type "namespace")
+                nil [175 224])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("PaneWidget" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [275 292])
+                            ("OutputParser" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [297 316])
+                            ("TestModel" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [321 337])
+                            ("ParseState" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [342 359])
+                            ("OutputPane" type
+                               (:superclasses 
+                                  ( ("Core::IOutputPane" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [501 508])
+                                    ("OutputPane" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QObject" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [537 556]))                                          
+                                        :type ("OutputPane" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [526 558])
+                                    ("OutputPane" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [567 582])
+                                    ("public" label nil (reparse-symbol classsubparts) [623 630])
+                                    ("outputWidget" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("parent" variable
+                                               (:pointer 1
+                                                :type ("QWidget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [661 677]))                                          
+                                        :type ("QWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [639 678])
+                                    ("toolBarWidgets" function
+                                       (:prototype-flag t
+                                        :type ("QList" type
+                                             (:template-specifier 
+                                                ( ("QWidget" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [687 727])
+                                    ("displayName" function
+                                       (:prototype-flag t
+                                        :type ("QString" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [736 764])
+                                    ("priorityInStatusBar" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [773 805])
+                                    ("clearContents" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [814 835])
+                                    ("visibilityChanged" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("visible" variable (:type "bool") (reparse-symbol arg-sub-list) [867 880]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [844 881])
+                                    ("setFocus" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [890 906])
+                                    ("hasFocus" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [915 937])
+                                    ("canFocus" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [946 968])
+                                    ("canNavigate" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [977 1002])
+                                    ("canNext" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1011 1032])
+                                    ("canPrevious" function
+                                       (:prototype-flag t
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [1041 1066])
+                                    ("goToNext" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1075 1091])
+                                    ("goToPrev" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1100 1116])
+                                    ("public" label nil (reparse-symbol classsubparts) [1124 1137])
+                                    ("handleRunStart" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("control" variable
+                                               (:pointer 1
+                                                :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1167 1204]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1146 1205])
+                                    ("handleRunFinish" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("control" variable
+                                               (:pointer 1
+                                                :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1236 1273]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1214 1274])
+                                    ("private" label nil (reparse-symbol classsubparts) [1282 1296])
+                                    ("parseMessage" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("control" variable
+                                               (:pointer 1
+                                                :type ("ProjectExplorer::RunControl" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1324 1361])
+                                            ("msg" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1389 1408])
+                                            ("format" variable (:type ("Utils::OutputFormat" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1409 1436]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1305 1437])
+                                    ("handleViewClicked" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1470 1495]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1446 1496])
+                                    ("private" label nil (reparse-symbol classsubparts) [1504 1512])
+                                    ("showError" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("errorIndex" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1537 1567]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1521 1568])
+                                    ("private" label nil (reparse-symbol classsubparts) [1576 1584])
+                                    ("parser_" variable
+                                       (:pointer 1
+                                        :type ("OutputParser" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1593 1615])
+                                    ("model_" variable (:type ("QSharedPointer" type
+                                         (:template-specifier 
+                                            ( ("TestModel" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1624 1657])
+                                    ("state_" variable
+                                       (:pointer 1
+                                        :type ("ParseState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1666 1685])
+                                    ("widget_" variable (:type ("QPointer" type
+                                         (:template-specifier 
+                                            ( ("PaneWidget" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [1720 1749])
+                                    ("totalsLabel_" variable
+                                       (:pointer 1
+                                        :type ("QLabel" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1785 1806])
+                                    ("disabledLabel_" variable
+                                       (:pointer 1
+                                        :type ("QLabel" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1815 1838])
+                                    ("statusLabel_" variable
+                                       (:pointer 1
+                                        :type ("QLabel" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1847 1868])
+                                    ("togglePopupButton_" variable
+                                       (:pointer 1
+                                        :type ("QToolButton" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1877 1909])
+                                    ("togglePassedButton_" variable
+                                       (:pointer 1
+                                        :type ("QToolButton" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1918 1951]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [428 1958]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [249 1963]))                  
+                :type "namespace")
+                nil [226 1987]))          
+      :file "OutputPane.h"
+      :pointmax 2034
+      :fsize 2033
+      :lastmodtime '(22060 21338 514631 845000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OUTPUTPANE_H")
+          )
+)
+    (semanticdb-table "OutputParser.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OUTPUTPARSER_H" variable (:constant-flag t) nil [32 46])
+            ("QObject" include (:system-flag t) nil [48 66])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("TestModel" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [117 133])
+                            ("ParseState" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [138 155])
+                            ("OutputParser" type
+                               (:superclasses 
+                                  ( ("QObject" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [226 233])
+                                    ("OutputParser" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QObject" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [264 283]))                                          
+                                        :type ("OutputParser" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [251 285])
+                                    ("isGoogleTestRun" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("line" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [317 337]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [295 344])
+                                    ("parseMessage" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("line" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [373 393])
+                                            ("model" variable
+                                               (:reference 1
+                                                :type ("TestModel" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [394 411])
+                                            ("state" variable
+                                               (:reference 1
+                                                :type ("ParseState" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [412 430]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [354 431]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [161 438]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [91 443]))                  
+                :type "namespace")
+                nil [68 467]))          
+      :file "OutputParser.h"
+      :pointmax 516
+      :fsize 515
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax '((EXPLICIT 242 . 250) (symbol 211 . 219))
+      :lexical-table 
+        '(("OUTPUTPARSER_H")
+          )
+)
+    (semanticdb-table "PaneWidget.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PANEWIDGET_H" variable (:constant-flag t) nil [30 42])
+            ("QWidget" include (:system-flag t) nil [44 62])
+            ("QSortFilterProxyModel" include (:system-flag t) nil [63 95])
+            ("Ui" type
+               (:members 
+                  ( ("PaneWidget" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [114 131]))                  
+                :type "namespace")
+                nil [97 133])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("TestModel" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [183 199])
+                            ("PaneWidget" type
+                               (:superclasses 
+                                  ( ("QWidget" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [269 276])
+                                    ("PaneWidget" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("model" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QSharedPointer" type
+                                                     (:template-specifier 
+                                                        ( ("TestModel" type nil nil nil))                                                        
+                                                      :type "class")
+                                                      nil nil))
+                                                (reparse-symbol arg-sub-list) [305 344])
+                                            ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QWidget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [345 364]))                                          
+                                        :type ("PaneWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [294 366])
+                                    ("PaneWidget" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [375 389])
+                                    ("public" label nil (reparse-symbol classsubparts) [397 404])
+                                    ("currentIndex" function
+                                       (:prototype-flag t
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [413 447])
+                                    ("setCurrentIndex" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [478 503]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [456 504])
+                                    ("testModelIndex" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("proxyIndex" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [541 571]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [513 578])
+                                    ("proxyIndex" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("testModelIndex" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [611 645]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [587 652])
+                                    ("public" label nil (reparse-symbol classsubparts) [660 673])
+                                    ("showPassed" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("show" variable (:type "bool") (reparse-symbol arg-sub-list) [699 709]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [682 710])
+                                    ("spanColumns" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [719 739])
+                                    ("viewClicked" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [782 807]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [764 808])
+                                    ("private" label nil (reparse-symbol classsubparts) [816 824])
+                                    ("ui" variable
+                                       (:pointer 1
+                                        :type ("Ui::PaneWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [833 852])
+                                    ("model_" variable (:type ("QSharedPointer" type
+                                         (:template-specifier 
+                                            ( ("TestModel" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [861 894])
+                                    ("proxy_" variable
+                                       (:pointer 1
+                                        :type ("QSortFilterProxyModel" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [903 933]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [205 940]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [158 945]))                  
+                :type "namespace")
+                nil [135 969]))          
+      :file "PaneWidget.h"
+      :pointmax 1016
+      :fsize 1015
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax '((punctuation 754 . 755) (symbol 747 . 754) (EXPLICIT 285 . 293) (symbol 253 . 261))
+      :lexical-table 
+        '(("PANEWIDGET_H")
+          )
+)
+    (semanticdb-table "TestModel.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("TESTMODEL_H" variable (:constant-flag t) nil [29 40])
+            ("QStandardItemModel" include (:system-flag t) nil [42 71])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("TestModel" type
+                               (:superclasses 
+                                  ( ("QStandardItemModel" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [266 273])
+                                    ("Column" type
+                                       (:members 
+                                          ( ("ColumnName" variable
+                                               (:constant-flag t
+                                                :default-value (327 328)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [314 328])
+                                            ("ColumnPassed" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [330 343])
+                                            ("ColumnFailed" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [344 357])
+                                            ("ColumnTime" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [358 369])
+                                            ("ColumnType" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [370 381])
+                                            ("ColumnCount" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [392 404])
+                                            ("ColumnFile" variable
+                                               (:constant-flag t
+                                                :default-value (428 440)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [415 440])
+                                            ("ColumnLine" variable
+                                               (:constant-flag t
+                                                :default-value (479 491)
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [466 491]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [282 516])
+                                    ("Type" type
+                                       (:members 
+                                          ( ("TypeCase" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [555 564])
+                                            ("TypeTest" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [565 574])
+                                            ("TypeDetail" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [575 586])
+                                            ("TypeDetailError" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [587 603])
+                                            ("TypeNote" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [604 613])
+                                            ("TypeUnknown" variable
+                                               (:constant-flag t
+                                                :type "int")
+                                                (reparse-symbol enumsubparts) [614 635]))                                          
+                                        :type "enum")
+                                        (reparse-symbol classsubparts) [525 636])
+                                    ("public" label nil (reparse-symbol classsubparts) [644 651])
+                                    ("TestModel" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QObject" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [679 698]))                                          
+                                        :type ("TestModel" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [669 700])
+                                    ("findItem" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [732 752])
+                                            ("parent" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [753 779]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [710 786])
+                                    ("caseIndex" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [819 839]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [796 846])
+                                    ("testIndex" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [878 898])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [899 923]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [855 930])
+                                    ("previousError" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [967 992]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [940 999])
+                                    ("nextError" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1031 1056]))                                          
+                                        :type ("QModelIndex" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1008 1063])
+                                    ("getType" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1087 1112]))                                          
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1073 1119])
+                                    ("errorCount" function
+                                       (:prototype-flag t
+                                        :type "int")
+                                        (reparse-symbol classsubparts) [1129 1153])
+                                    ("title" function
+                                       (:prototype-flag t
+                                        :type ("QString" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [1163 1185])
+                                    ("setTitle" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("title" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1208 1229]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1194 1230])
+                                    ("clear" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1240 1254])
+                                    ("public" label nil (reparse-symbol classsubparts) [1262 1275])
+                                    ("addNote" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("text" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1298 1318]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1284 1319])
+                                    ("addCase" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1342 1362]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1328 1363])
+                                    ("addTest" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1386 1406])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1407 1431]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1372 1432])
+                                    ("addTestDetail" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1461 1481])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1482 1506])
+                                            ("detail" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1507 1529]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1441 1530])
+                                    ("addTestError" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1558 1578])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1579 1603])
+                                            ("detail" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1604 1626])
+                                            ("file" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1627 1647])
+                                            ("line" variable (:type "int") (reparse-symbol arg-sub-list) [1648 1657]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1539 1658])
+                                    ("updateTest" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1685 1705])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1706 1730])
+                                            ("isOk" variable (:type "bool") (reparse-symbol arg-sub-list) [1731 1741])
+                                            ("time" variable (:type "int") (reparse-symbol arg-sub-list) [1742 1751]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1668 1752])
+                                    ("updateCase" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1778 1798])
+                                            ("passedCount" variable (:type "int") (reparse-symbol arg-sub-list) [1799 1815])
+                                            ("failedCount" variable (:type "int") (reparse-symbol arg-sub-list) [1816 1832])
+                                            ("time" variable (:type "int") (reparse-symbol arg-sub-list) [1833 1842]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1761 1843])
+                                    ("renameTest" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("oldName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1870 1893])
+                                            ("newName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1894 1917])
+                                            ("caseName" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [1918 1942]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [1853 1943])
+                                    ("private" label nil (reparse-symbol classsubparts) [1951 1959])
+                                    ("createRow" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("name" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2001 2021])
+                                            ("type" variable (:type ("Type" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2022 2032]))                                          
+                                        :type ("QList" type
+                                             (:template-specifier 
+                                                ( ("QStandardItem" type (:pointer 1) nil nil))                                                
+                                              :type "class")
+                                              nil nil))
+                                        (reparse-symbol classsubparts) [1968 2039])
+                                    ("setRowColor" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2066 2091])
+                                            ("color" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QColor" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2092 2112]))                                          
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [2048 2113])
+                                    ("getCurrentRows" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("index" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QModelIndex" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [2143 2168])
+                                            ("caseRow" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [2169 2182])
+                                            ("testRow" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [2183 2196])
+                                            ("detailRow" variable
+                                               (:reference 1
+                                                :type "int")
+                                                (reparse-symbol arg-sub-list) [2197 2212]))                                          
+                                        :type ("Type" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [2122 2219])
+                                    ("private" label nil (reparse-symbol classsubparts) [2227 2235])
+                                    ("title_" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [2244 2259])
+                                    ("errorCount_" variable (:type "int") (reparse-symbol classsubparts) [2268 2284])
+                                    ("columnNames_" variable (:type ("QHash" type
+                                         (:template-specifier 
+                                            ( ("int" type nil nil nil)
+                                              ("QString" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [2293 2326]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [193 2333]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [96 2338]))                  
+                :type "namespace")
+                nil [73 2362]))          
+      :file "TestModel.h"
+      :pointmax 2408
+      :fsize 2407
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax '((EXPLICIT 660 . 668) (symbol 251 . 259))
+      :lexical-table 
+        '(("TESTMODEL_H")
+          )
+)
+    (semanticdb-table "ParseState.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("PARSESTATE_H" variable (:constant-flag t) nil [30 42])
+            ("QString" include (:system-flag t) nil [44 62])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("ParseState" type
+                               (:members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [136 143])
+                                    ("ParseState" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :type ("ParseState" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [150 164])
+                                    ("reset" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [171 185])
+                                    ("isGoogleTestRun" variable (:type "bool") (reparse-symbol classsubparts) [193 214])
+                                    ("projectPath" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [221 241])
+                                    ("customPath" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [248 267])
+                                    ("currentCase" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [274 294])
+                                    ("currentTest" variable (:type ("QString" type (:type "class") nil nil)) (reparse-symbol classsubparts) [301 321])
+                                    ("passedCount" variable (:type "int") (reparse-symbol classsubparts) [328 344])
+                                    ("failedCount" variable (:type "int") (reparse-symbol classsubparts) [351 367])
+                                    ("passedTotalCount" variable (:type "int") (reparse-symbol classsubparts) [374 395])
+                                    ("failedTotalCount" variable (:type "int") (reparse-symbol classsubparts) [402 423])
+                                    ("totalTime" variable (:type "int") (reparse-symbol classsubparts) [430 444])
+                                    ("disabledCount" variable (:type "int") (reparse-symbol classsubparts) [451 469]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [111 474]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [87 477]))                  
+                :type "namespace")
+                nil [64 501]))          
+      :file "ParseState.h"
+      :pointmax 549
+      :fsize 548
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("PARSESTATE_H")
+          )
+)
+    (semanticdb-table "OptionsPage.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QPointer" include (:system-flag t) nil [1 20])
+            ("OptionsPage.h" include nil nil [22 46])
+            ("OptionsWidget.h" include nil nil [47 73])
+            ("Constants.h" include nil nil [74 96])
+            ("QtcCppcheck::Internal" using (:type ("QtcCppcheck::Internal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [98 136])
+            ("OptionsPage" function
+               (:constructor-flag t
+                :parent "OptionsPage"
+                :arguments 
+                  ( ("settings" variable
+                       (:pointer 1
+                        :type ("Settings" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [163 182])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QObject" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [183 199]))                  
+                :type ("OptionsPage" type (:type "class") nil nil))
+                nil [138 519])
+            ("OptionsPage" function
+               (:destructor-flag t
+                :parent "OptionsPage"
+                :type "void")
+                nil [521 572])
+            ("matches" function
+               (:parent "OptionsPage"
+                :arguments 
+                  ( ("searchKeyWord" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [600 629]))                  
+                :type "bool")
+                nil [574 684])
+            ("createPage" function
+               (:pointer 1
+                :parent "OptionsPage"
+                :arguments 
+                  ( ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [719 735]))                  
+                :type ("QWidget" type (:type "class") nil nil))
+                nil [686 881])
+            ("apply" function
+               (:parent "OptionsPage"
+                :type "void")
+                nil [883 1001])
+            ("finish" function
+               (:parent "OptionsPage"
+                :type "void")
+                nil [1003 1034]))          
+      :file "OptionsPage.cpp"
+      :pointmax 1035
+      :fsize 1034
+      :lastmodtime '(22060 21031 199989 575000)
+      :unmatched-syntax nil)
+    (semanticdb-table "OptionsPage.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OPTIONSPAGE_H" variable (:constant-flag t) nil [31 44])
+            ("coreplugin/dialogs/ioptionspage.h" include (:system-flag t) nil [46 90])
+            ("QtcGtest" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("Settings" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [141 156])
+                            ("OptionsWidget" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [161 181])
+                            ("OptionsPage" type
+                               (:superclasses 
+                                  ( ("Core::IOptionsPage" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [362 369])
+                                    ("OptionsPage" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("settings" variable
+                                               (:pointer 1
+                                                :type ("Settings" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [399 418])
+                                            ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QObject" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [419 438]))                                          
+                                        :type ("OptionsPage" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [387 440])
+                                    ("OptionsPage" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [449 465])
+                                    ("matches" function
+                                       (:prototype-flag t
+                                        :arguments 
+                                          ( ("searchKeyWord" variable
+                                               (:reference 1
+                                                :constant-flag t
+                                                :type ("QString" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [488 517]))                                          
+                                        :type "bool")
+                                        (reparse-symbol classsubparts) [475 524])
+                                    ("createPage" function
+                                       (:prototype-flag t
+                                        :pointer 1
+                                        :arguments 
+                                          ( ("parent" variable
+                                               (:pointer 1
+                                                :type ("QWidget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [553 569]))                                          
+                                        :type ("QWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [533 570])
+                                    ("apply" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [579 592])
+                                    ("finish" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [601 615])
+                                    ("the_function" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [618 638])
+                                    ("settingsChanged" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [663 687])
+                                    ("private" label nil (reparse-symbol classsubparts) [695 703])
+                                    ("widget_" variable (:type ("QPointer" type
+                                         (:template-specifier 
+                                            ( ("OptionsWidget" type nil nil nil))                                            
+                                          :type "class")
+                                          nil nil)) (reparse-symbol classsubparts) [712 744])
+                                    ("settings_" variable
+                                       (:pointer 1
+                                        :type ("Settings" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [753 773])
+                                    ("keyWords_" variable (:type ("QStringList" type (:type "class") nil nil)) (reparse-symbol classsubparts) [782 804]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [287 812]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [115 817]))                  
+                :type "namespace")
+                nil [92 841]))          
+      :file "OptionsPage.h"
+      :pointmax 893
+      :fsize 892
+      :lastmodtime '(22060 20610 813493 901000)
+      :unmatched-syntax nil
+      :lexical-table 
+        '(("OPTIONSPAGE_H")
+          )
+)
+    (semanticdb-table "OptionsWidget.h"
+      :major-mode 'c-mode
+      :tags 
+        '( ("OPTIONSWIDGET_H" variable (:constant-flag t) nil [33 48])
+            ("QWidget" include (:system-flag t) nil [50 68])
+            ("QProcess" include (:system-flag t) nil [69 88])
+            ("Ui" type
+               (:members 
+                  ( ("OptionsWidget" type
+                       (:prototype t
+                        :type "class")
+                        (reparse-symbol namespacesubparts) [107 127]))                  
+                :type "namespace")
+                nil [90 129])
+            ("QtcCppcheck" type
+               (:members 
+                  ( ("Internal" type
+                       (:members 
+                          ( ("Settings" type
+                               (:prototype t
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [182 197])
+                            ("OptionsWidget" type
+                               (:superclasses 
+                                  ( ("QWidget" type
+                                       (:protection "public"
+                                        :type "class")
+                                        nil nil))                                  
+                                :members 
+                                  ( ("public" label nil (reparse-symbol classsubparts) [599 606])
+                                    ("OptionsWidget" function
+                                       (:prototype-flag t
+                                        :constructor-flag t
+                                        :arguments 
+                                          ( ("settings" variable
+                                               (:pointer 1
+                                                :type ("Settings" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [638 657])
+                                            ("parent" variable
+                                               (:pointer 1
+                                                :default-value "0"
+                                                :type ("QWidget" type (:type "class") nil nil))
+                                                (reparse-symbol arg-sub-list) [658 677]))                                          
+                                        :type ("OptionsWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [624 679])
+                                    ("OptionsWidget" function
+                                       (:prototype-flag t
+                                        :destructor-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [688 705])
+                                    ("applySettings" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [715 737])
+                                    ("private" label nil (reparse-symbol classsubparts) [745 759])
+                                    ("selectBinaryFile" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [768 793])
+                                    ("getPossibleParams" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [802 828])
+                                    ("finished" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [838 855])
+                                    ("private" label nil (reparse-symbol classsubparts) [863 871])
+                                    ("initInterface" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [880 902])
+                                    ("getVersion" function
+                                       (:prototype-flag t
+                                        :type "void")
+                                        (reparse-symbol classsubparts) [911 930])
+                                    ("private" label nil (reparse-symbol classsubparts) [938 946])
+                                    ("ui" variable
+                                       (:pointer 1
+                                        :type ("Ui::OptionsWidget" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [955 977])
+                                    ("settings_" variable
+                                       (:pointer 1
+                                        :type ("Settings" type (:type "class") nil nil))
+                                        (reparse-symbol classsubparts) [986 1006])
+                                    ("process_" variable (:type ("QProcess" type (:type "class") nil nil)) (reparse-symbol classsubparts) [1015 1033]))                                  
+                                :type "class")
+                                (reparse-symbol namespacesubparts) [532 1040]))                          
+                        :type "namespace")
+                        (reparse-symbol namespacesubparts) [157 1045]))                  
+                :type "namespace")
+                nil [131 1069]))          
+      :file "OptionsWidget.h"
+      :pointmax 1123
+      :fsize 1122
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax '((EXPLICIT 615 . 623) (symbol 583 . 591))
+      :lexical-table 
+        '(("OPTIONSWIDGET_H")
+          )
+)
+    (semanticdb-table "PaneWidget.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("PaneWidget.h" include nil nil [1 24])
+            ("ui_PaneWidget.h" include nil nil [25 51])
+            ("TestModel.h" include nil nil [52 74])
+            ("AutoToolTipDelegate.h" include nil nil [75 107])
+            ("QtcGtest::Internal" using (:type ("QtcGtest::Internal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [109 144])
+            ("PaneWidget" function
+               (:constructor-flag t
+                :parent "PaneWidget"
+                :arguments 
+                  ( ("model" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QSharedPointer" type
+                             (:template-specifier 
+                                ( ("TestModel" type nil nil nil))                                
+                              :type "class")
+                              nil nil))
+                        (reparse-symbol arg-sub-list) [169 208])
+                    ("parent" variable
+                       (:pointer 1
+                        :type ("QWidget" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [209 225]))                  
+                :type ("PaneWidget" type (:type "class") nil nil))
+                nil [146 1016])
+            ("PaneWidget" function
+               (:destructor-flag t
+                :parent "PaneWidget"
+                :type "void")
+                nil [1018 1060])
+            ("currentIndex" function
+               (:parent "PaneWidget"
+                :type ("QModelIndex" type (:type "class") nil nil))
+                nil [1062 1150])
+            ("setCurrentIndex" function
+               (:parent "PaneWidget"
+                :arguments 
+                  ( ("index" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1185 1210]))                  
+                :type "void")
+                nil [1152 1255])
+            ("testModelIndex" function
+               (:parent "PaneWidget"
+                :arguments 
+                  ( ("proxyIndex" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1296 1326]))                  
+                :type ("QModelIndex" type (:type "class") nil nil))
+                nil [1257 1378])
+            ("proxyIndex" function
+               (:parent "PaneWidget"
+                :arguments 
+                  ( ("testModelIndex" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QModelIndex" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [1415 1449]))                  
+                :type ("QModelIndex" type (:type "class") nil nil))
+                nil [1380 1507])
+            ("showPassed" function
+               (:parent "PaneWidget"
+                :arguments 
+                  ( ("show" variable (:type "bool") (reparse-symbol arg-sub-list) [1537 1547]))                  
+                :type "void")
+                nil [1509 1729])
+            ("spanColumns" function
+               (:parent "PaneWidget"
+                :type "void")
+                nil [1731 2525]))          
+      :file "PaneWidget.cpp"
+      :pointmax 2526
+      :fsize 2525
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax nil)
+    (semanticdb-table "AutoToolTipDelegate.h"
+      :file "AutoToolTipDelegate.h"
+      :fsize 549
+      :lastmodtime '(22060 5348 408204 916000))
+    (semanticdb-table "QtcGtestPlugin.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("QAction" include (:system-flag t) nil [1 19])
+            ("QTranslator" include (:system-flag t) nil [20 42])
+            ("QMenu" include (:system-flag t) nil [43 59])
+            ("QCoreApplication" include (:system-flag t) nil [60 87])
+            ("QAbstractItemModel" include (:system-flag t) nil [88 117])
+            ("coreplugin/icore.h" include (:system-flag t) nil [119 148])
+            ("coreplugin/coreconstants.h" include (:system-flag t) nil [149 186])
+            ("coreplugin/actionmanager/actionmanager.h" include (:system-flag t) nil [187 238])
+            ("coreplugin/actionmanager/actioncontainer.h" include (:system-flag t) nil [239 292])
+            ("coreplugin/editormanager/editormanager.h" include (:system-flag t) nil [293 344])
+            ("projectexplorer/projectexplorer.h" include (:system-flag t) nil [345 389])
+            ("QtPlugin" include (:system-flag t) nil [391 410])
+            ("QtcGtestPlugin.h" include nil nil [412 439])
+            ("Constants.h" include nil nil [440 462])
+            ("Settings.h" include nil nil [463 484])
+            ("OutputPane.h" include nil nil [485 508])
+            ("TestProject.h" include nil nil [509 533])
+            ("QtcGtest::Internal" using (:type ("QtcGtest::Internal" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [535 570])
+            ("Core" using (:type ("Core" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [572 593])
+            ("ProjectExplorer" using (:type ("ProjectExplorer" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [594 626])
+            ("QtcGtestPlugin" function
+               (:constructor-flag t
+                :parent "QtcGtestPlugin"
+                :type ("QtcGtestPlugin" type (:type "class") nil nil))
+                nil [628 744])
+            ("QtcGtestPlugin" function
+               (:destructor-flag t
+                :parent "QtcGtestPlugin"
+                :type "void")
+                nil [746 865])
+            ("initialize" function
+               (:parent "QtcGtestPlugin"
+                :arguments 
+                  ( ("arguments" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("QStringList" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [899 928])
+                    ("errorString" variable
+                       (:pointer 1
+                        :type ("QString" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [929 950]))                  
+                :type "bool")
+                nil [867 2261])
+            ("initLanguage" function
+               (:parent "QtcGtestPlugin"
+                :type "void")
+                nil [2263 2821])
+            ("initMenus" function
+               (:parent "QtcGtestPlugin"
+                :type "void")
+                nil [2823 4579])
+            ("extensionsInitialized" function
+               (:parent "QtcGtestPlugin"
+                :type "void")
+                nil [4581 4822])
+            ("aboutToShutdown" function
+               (:parent "QtcGtestPlugin"
+                :type ("ExtensionSystem::IPlugin::ShutdownFlag" type (:type "class") nil nil))
+                nil [4824 5083]))          
+      :file "QtcGtestPlugin.cpp"
+      :pointmax 5084
+      :fsize 5083
+      :lastmodtime '(22060 5348 408204 916000)
+      :unmatched-syntax nil)
+    (semanticdb-table "QtcGtestPlugin.h"
+      :file "QtcGtestPlugin.h"
+      :fsize 821
+      :lastmodtime '(22060 5348 408204 916000))
+    (semanticdb-table "Settings.h"
+      :file "Settings.h"
+      :fsize 1586
+      :lastmodtime '(22060 5348 408204 916000))
+    (semanticdb-table "TestProject.h"
+      :file "TestProject.h"
+      :fsize 1717
+      :lastmodtime '(22060 5348 408204 916000)))
+  :file "!home!halushko!Projects!qtc-gtest!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

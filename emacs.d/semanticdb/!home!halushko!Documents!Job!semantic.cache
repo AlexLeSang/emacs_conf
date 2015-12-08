@@ -1,0 +1,46 @@
+;; Object Job/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "Job/"
+  :tables
+  (list
+    (semanticdb-table "q20.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("cstdint" include (:system-flag t) nil [21 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [50 59])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [60 72]))                  
+                :type "int")
+                nil [41 158]))          
+      :file "q20.cpp"
+      :pointmax 159
+      :fsize 158
+      :lastmodtime '(22092 43085 869771 431000)
+      :unmatched-syntax nil)
+    (semanticdb-table "q21.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("iostream" include (:system-flag t) nil [1 20])
+            ("cstdint" include (:system-flag t) nil [21 39])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [63 72])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [73 85]))                  
+                :type "int")
+                nil [54 137]))          
+      :file "q21.cpp"
+      :pointmax 138
+      :fsize 137
+      :lastmodtime '(22092 43808 959410 519000)
+      :unmatched-syntax nil))
+  :file "!home!halushko!Documents!Job!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

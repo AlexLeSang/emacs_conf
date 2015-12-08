@@ -1,0 +1,19 @@
+;; Object LGL/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "LGL/"
+  :tables
+  (list
+    (semanticdb-table "visualize.py"
+      :major-mode 'python-mode
+      :tags 
+        '( ("igraph" include nil nil [1 21])
+            ("graph" variable nil nil [23 63])
+            ("layout" variable nil nil [64 91]))          
+      :file "visualize.py"
+      :pointmax 138
+      :fsize 137
+      :lastmodtime '(22080 64841 361284 903000)
+      :unmatched-syntax '((NAME 92 . 96) ($EOI 138 . 138) (NAME 92 . 96) ($EOI 128 . 128) (NAME 92 . 96) ($EOI 120 . 120) (NAME 64 . 70) (NEWLINE 79 . 80) (NAME 80 . 84) ($EOI 108 . 108) (NAME 93 . 97) ($EOI 121 . 121) (NAME 95 . 99) ($EOI 123 . 123) (IMPORT 15 . 21) (MULT 22 . 23))))
+  :file "!home!halushko!Documents!LGL!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

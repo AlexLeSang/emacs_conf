@@ -1,0 +1,99 @@
+;; Object src/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "src/"
+  :tables
+  (list
+    (semanticdb-table "actor_ostream.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("caf/actor_ostream.hpp" include nil nil [1443 1475])
+            ("caf/all.hpp" include nil nil [1477 1499])
+            ("caf/local_actor.hpp" include nil nil [1500 1530])
+            ("caf/scoped_actor.hpp" include nil nil [1531 1562])
+            ("caf/scheduler/abstract_coordinator.hpp" include nil nil [1564 1613])
+            ("caf/detail/singletons.hpp" include nil nil [1615 1651])
+            ("caf" type
+               (:members 
+                  ( ("actor_ostream" function
+                       (:constructor-flag t
+                        :parent "actor_ostream"
+                        :arguments 
+                          ( ("self" variable (:type ("actor" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1699 1710]))                          
+                        :type ("actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1670 1829])
+                    ("write" function
+                       (:parent "actor_ostream"
+                        :arguments 
+                          ( ("arg" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [1867 1883]))                          
+                        :type ("actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1831 1964])
+                    ("flush" function
+                       (:parent "actor_ostream"
+                        :type ("actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [1966 2070])
+                    ("redirect" function
+                       (:parent "actor_ostream"
+                        :arguments 
+                          ( ("src" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("actor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2101 2118])
+                            ("f" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2119 2133])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2134 2144]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2072 2293])
+                    ("redirect_all" function
+                       (:parent "actor_ostream"
+                        :arguments 
+                          ( ("f" variable (:type ("std::string" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [2328 2342])
+                            ("flags" variable (:type "int") (reparse-symbol arg-sub-list) [2343 2353]))                          
+                        :type "void")
+                        (reparse-symbol namespacesubparts) [2295 2486])
+                    ("aout" function
+                       (:arguments 
+                          ( ("self" variable
+                               (:reference 1
+                                :constant-flag t
+                                :type ("scoped_actor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2507 2532]))                          
+                        :type ("actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2488 2566])
+                    ("aout" function
+                       (:arguments 
+                          ( ("self" variable
+                               (:pointer 1
+                                :type ("abstract_actor" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2587 2608]))                          
+                        :type ("actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2568 2692]))                  
+                :type "namespace")
+                nil [1653 2695])
+            ("std" type
+               (:members 
+                  ( ("endl" function
+                       (:arguments 
+                          ( ("o" variable
+                               (:reference 1
+                                :type ("caf::actor_ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2756 2778]))                          
+                        :type ("caf::actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2731 2806])
+                    ("flush" function
+                       (:arguments 
+                          ( ("o" variable
+                               (:reference 1
+                                :type ("caf::actor_ostream" type (:type "class") nil nil))
+                                (reparse-symbol arg-sub-list) [2834 2856]))                          
+                        :type ("caf::actor_ostream" type (:type "class") nil nil))
+                        (reparse-symbol namespacesubparts) [2808 2880]))                  
+                :type "namespace")
+                nil [2714 2883]))          
+      :file "actor_ostream.cpp"
+      :pointmax 2901
+      :fsize 2900
+      :lastmodtime '(22118 64436 532199 380000)
+      :unmatched-syntax nil))
+  :file "!home!halushko!Projects!unit_test!bii!deps!caf_bot!actor-framework!libcaf_core!src!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

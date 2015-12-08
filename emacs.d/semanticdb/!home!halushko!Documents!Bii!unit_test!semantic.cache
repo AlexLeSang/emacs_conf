@@ -1,0 +1,38 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("google/gtest/include/gtest/gtest.h" include nil nil [27 72])
+            ("sum" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [82 88])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [89 95]))                  
+                :type "int")
+                nil [74 109])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [116 120])
+                    ("" variable (:type ("Normal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [121 128]))                  
+                :type "int")
+                nil [111 159])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [170 179])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [180 192]))                  
+                :type "int")
+                nil [161 262]))          
+      :file "main.cpp"
+      :pointmax 263
+      :fsize 262
+      :lastmodtime '(22078 22312 109753 107000)
+      :unmatched-syntax nil))
+  :file "!home!halushko!Documents!Bii!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")

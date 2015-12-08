@@ -1,0 +1,88 @@
+;; Object unit_test/
+;; SEMANTICDB Tags save file
+(semanticdb-project-database-file "unit_test/"
+  :tables
+  (list
+    (semanticdb-table "main.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("google/gtest/include/gtest/gtest.h" include nil nil [27 72])
+            ("caf_bot/actor-framework/libcaf_core/caf/all.hpp" include nil nil [73 131])
+            ("sum" function
+               (:arguments 
+                  ( ("a" variable (:type "int") (reparse-symbol arg-sub-list) [141 147])
+                    ("b" variable (:type "int") (reparse-symbol arg-sub-list) [148 154]))                  
+                :type "int")
+                nil [133 168])
+            ("TEST" function
+               (:arguments 
+                  ( ("" variable (:type ("Sum" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [175 179])
+                    ("" variable (:type ("Normal" type (:type "class") nil nil)) (reparse-symbol arg-sub-list) [180 187]))                  
+                :type "int")
+                nil [170 218])
+            ("main" function
+               (:arguments 
+                  ( ("argc" variable (:type "int") (reparse-symbol arg-sub-list) [229 238])
+                    ("argv" variable
+                       (:pointer 2
+                        :type "char")
+                        (reparse-symbol arg-sub-list) [239 251]))                  
+                :type "int")
+                nil [220 321]))          
+      :file "main.cpp"
+      :pointmax 322
+      :fsize 321
+      :lastmodtime '(22119 9390 585321 942000)
+      :unmatched-syntax nil)
+    (semanticdb-table "caf_example2.cpp"
+      :major-mode 'c++-mode
+      :tags nil
+      :file "caf_example2.cpp"
+      :pointmax 1
+      :fsize 0
+      :lastmodtime '(22119 913 318396 59000)
+      :unmatched-syntax nil)
+    (semanticdb-table "caf_example1.cpp"
+      :major-mode 'c++-mode
+      :tags 
+        '( ("string" include (:system-flag t) nil [1 18])
+            ("iostream" include (:system-flag t) nil [19 38])
+            ("caf_bot/actor-framework/libcaf_core/caf/all.hpp" include nil nil [40 98])
+            ("std" using (:type ("std" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [100 120])
+            ("caf" using (:type ("caf" type
+                 (:prototype t
+                  :type "namespace")
+                  nil nil)) nil [121 141])
+            ("mirror" function
+               (:arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("event_based_actor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [159 183]))                  
+                :type ("behavior" type (:type "class") nil nil))
+                nil [143 375])
+            ("hello_world" function
+               (:arguments 
+                  ( ("self" variable
+                       (:pointer 1
+                        :type ("event_based_actor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [394 418])
+                    ("buddy" variable
+                       (:reference 1
+                        :constant-flag t
+                        :type ("actor" type (:type "class") nil nil))
+                        (reparse-symbol arg-sub-list) [419 438]))                  
+                :type "void")
+                nil [377 568])
+            ("main" function (:type "int") nil [570 706]))          
+      :file "caf_example1.cpp"
+      :pointmax 707
+      :fsize 706
+      :lastmodtime '(22119 474 807090 912000)
+      :unmatched-syntax nil))
+  :file "!home!halushko!Projects!unit_test!semantic.cache"
+  :semantic-tag-version "2.0"
+  :semanticdb-version "2.2")
