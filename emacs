@@ -1,5 +1,7 @@
 (tool-bar-mode -1)
 
+(add-to-list 'default-frame-alist '(fullscreen . maximized))
+
 ;; Makes *scratch* empty.
 (setq initial-scratch-message "")
 
@@ -58,6 +60,17 @@
 
 ;; Clang format
 (load "~/.emacs.d/clang/clang-format.el")
+
+;; sr-speedbar
+(load "~/.emacs.d/elpa/sr-speedbar-0.1.8/sr-speedbar.el")
+(require 'sr-speedbar)
+(setq speedbar-show-unknown-files t)
+(setq speedbar-use-images nil)
+(setq sr-speedbar-right-side nil)
+;;(setq sr-speedbar-max-width 50)
+(global-set-key (kbd "C-x O") 'sr-speedbar-open) 
+(global-set-key (kbd "C-x C") 'sr-speedbar-close) 
+;;(sr-speedbar-open)
 
 ;; indent-guide
 (require 'indent-guide)
