@@ -85,6 +85,12 @@
 (setq indent-guide-delay 0.1)
 (setq indent-guide-recursive t)
 
+;; YASnippet
+(require 'yasnippet)
+(setq yas/root-directory "~/emacs/snippets")
+(yas/load-directory yas/root-directory)
+(yas/minor-mode)
+(yas/global-mode)
 
 (add-hook 'c-mode-common-hook '(lambda ()
 				 (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
