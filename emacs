@@ -137,8 +137,8 @@
 ;;(set-face-foreground 'highlight nil)
 
 ;; IDO
-(require 'ido)
-(ido-mode t)
+;;(require 'ido)
+;;(ido-mode t)
 
 ;; LaTeX
 (require 'tex)
