@@ -35,19 +35,11 @@
     (windmove-default-keybindings))
 
 (require 'goto-chg)
-
 (global-set-key (kbd "M-<left>") 'goto-last-change)
 (global-set-key (kbd "M-<right>") 'goto-last-change-reverse)
 
 ;; CEDET
-(require 'cedet)
-(semantic-mode 1)
-(global-ede-mode 1)         
-(global-semanticdb-minor-mode)
-(global-semantic-highlight-func-mode)
-(global-semantic-idle-local-symbol-highlight-mode)
-(global-semantic-idle-scheduler-mode)
-(global-semantic-idle-completions-mode)
+(load-file "~/emacs/cedet.el")
 
 ;; flycheck
 (require 'flycheck)
@@ -62,22 +54,7 @@
 (load "~/.emacs.d/clang/clang-format.el")
 
 ;; sr-speedbar
-(load "~/.emacs.d/elpa/sr-speedbar-0.1.8/sr-speedbar.el")
-(require 'sr-speedbar)
-(setq speedbar-show-unknown-files t)
-(setq speedbar-use-images nil)
-(setq sr-speedbar-right-side nil)
-(setq sr-speedbar-max-width 60)
-(setq sr-speedbar-default-width 40)
-(global-set-key (kbd "C-x O") 'sr-speedbar-open) 
-(global-set-key (kbd "C-x C") 'sr-speedbar-close) 
-;;(sr-speedbar-open)
-
-;; Smex
-;;(global-set-key (kbd "M-x") 'smex)
-;;(global-set-key (kbd "M-X") 'smex-major-mode-commands)
-;;;; This is your old M-x.
-;;(global-set-key (kbd "C-c C-c M-x") 'execute-extended-command)
+(load-file "~/emacs/sr-speedbar.el")
 
 ;; indent-guide
 (require 'indent-guide)
@@ -85,26 +62,8 @@
 (setq indent-guide-delay 0.1)
 (setq indent-guide-recursive t)
 
-;; Helm
-(add-to-list 'load-path "~/.emacs.d/helm")
-(add-to-list 'load-path "~/.emacs.d/emacs-async")
-(require 'helm-config)
-(helm-mode 1)
-(define-key global-map [remap find-file] 'helm-find-files)
-(define-key global-map [remap occur] 'helm-occur)
-(define-key global-map [remap list-buffers] 'helm-buffers-list)
-(define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
-(global-set-key (kbd "M-x") 'helm-M-x)
-
-;; Helm-git
-(add-to-list 'load-path "~/.emacs.d/helm-ls-git")
-(require 'helm-ls-git)
-(global-set-key (kbd "C-x C-d") 'helm-browse-project)
-
-;; 
-(add-to-list 'load-path "~/.emacs.d/helm-descbinds")
-(require 'helm-descbinds)
-(helm-descbinds-mode)
+;; HELM
+(load-file "~/emacs/helm.el")
 
 ;; YASnippet
 (require 'yasnippet)
@@ -150,42 +109,9 @@
 ;;(require 'ido)
 ;;(ido-mode t)
 
-;; LaTeX
-(require 'tex)
+(load-file "~/emacs/auctex.el")
 
-;; AUCTeX
-(add-hook 'reftex-load-hook 'imenu-add-menubar-index)
-(add-hook 'reftex-mode-hook 'imenu-add-menubar-index)
-
-(setq TeX-auto-save t)
-(setq TeX-parse-self t)
-(setq-default TeX-master nil)
-
-(add-hook 'LaTeX-mode-hook 'visual-line-mode)
-(add-hook 'LaTeX-mode-hook 'flyspell-mode)
-(add-hook 'LaTeX-mode-hook 'LaTeX-math-mode)
-
-(add-hook 'LaTeX-mode-hook 'turn-on-reftex)
-(setq reftex-plug-into-AUCTeX t)
-
-(require 'auto-complete)
-(require 'auto-complete-config)
-(ac-config-default)
-
-(add-to-list 'ac-modes 'latex-mode)   ; make auto-complete aware of `latex-mode`
-
-(defun ac-LaTeX-mode-setup () ; add ac-sources to default ac-sources
-  (setq ac-sources
-	(append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
-		ac-sources))
-  )
-(add-hook 'LaTeX-mode-hook 'ac-LaTeX-mode-setup)
-(global-auto-complete-mode t)
-
-(setq ac-math-unicode-in-math-p t)
-
-;; PDF-LaTeX
-(TeX-global-PDF-mode t)
+;; Custom variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
