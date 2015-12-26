@@ -1,3 +1,5 @@
+(server-start) ;; alias emacs="emacsclient.emacs24 --alternate-editor="" -c"
+
 (tool-bar-mode -1)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
@@ -24,7 +26,11 @@
 
 (require 'package)
 
+(setq load-prefer-newer t)
 (package-initialize)
+(require 'auto-compile)
+(auto-compile-on-load-mode)
+(auto-compile-on-save-mode)
 
 ;; cua-mode
 (setq cua-enable-cua-keys nil)
@@ -62,15 +68,13 @@
 (setq indent-guide-delay 0.1)
 (setq indent-guide-recursive t)
 
-;; HELM
-(load-file "~/emacs/helm.el")
 
 ;; YASnippet
 (require 'yasnippet)
 (setq yas/root-directory "~/emacs/snippets")
 (yas/load-directory yas/root-directory)
-(yas/minor-mode)
-(yas/global-mode)
+;;(yas/minor-mode)
+;;(yas/global-mode)
 
 (add-hook 'c-mode-common-hook '(lambda ()
 				 (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
@@ -110,6 +114,9 @@
 ;;(ido-mode t)
 
 (load-file "~/emacs/auctex.el")
+
+;; HELM
+(load-file "~/emacs/helm.el")
 
 ;; Custom variables
 (custom-set-variables
