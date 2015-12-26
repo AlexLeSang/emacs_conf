@@ -96,6 +96,11 @@
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
 (global-set-key (kbd "M-x") 'helm-M-x)
 
+;; Helm-gi
+(add-to-list 'load-path "~/.emacs.d/helm-ls-git")
+(require 'helm-ls-git)
+(global-set-key (kbd "C-x C-d") 'helm-browse-project)
+
 ;; YASnippet
 (require 'yasnippet)
 (setq yas/root-directory "~/emacs/snippets")
