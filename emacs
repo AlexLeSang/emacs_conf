@@ -68,6 +68,10 @@
 (setq indent-guide-delay 0.1)
 (setq indent-guide-recursive t)
 
+;; Ace-Jump
+(add-to-list 'load-path "~/emacs/emacs.d/elpa/ace-jump-mode-2.0.0.0/")
+(require 'ace-jump-mode)
+(define-key global-map (kbd "C-c SPC") 'ace-jump-mode)
 
 ;; YASnippet
 (require 'yasnippet)
