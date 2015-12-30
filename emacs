@@ -118,6 +118,12 @@
 ;; HELM
 (load-file "~/emacs/helm.el")
 
+;; Matlab mode
+(setq auto-mode-alist
+      (cons
+       '("\\.m$" . octave-mode)
+       auto-mode-alist))
+
 ;; Custom variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
