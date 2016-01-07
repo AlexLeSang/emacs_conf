@@ -32,6 +32,10 @@
 (auto-compile-on-load-mode)
 (auto-compile-on-save-mode)
 
+;; No tabs
+(setq tab-width 4)
+(setq-default indent-tabs-mode nil)
+
 ;; cua-mode
 (setq cua-enable-cua-keys nil)
 (global-set-key (kbd "C-x r") 'cua-rectangle-mark-mode) 
