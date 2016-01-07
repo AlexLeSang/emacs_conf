@@ -7,6 +7,7 @@
 (define-key global-map [remap occur] 'helm-occur)
 (define-key global-map [remap list-buffers] 'helm-buffers-list)
 (define-key global-map [remap dabbrev-expand] 'helm-dabbrev)
+(global-set-key (kbd "C-x M-f") 'helm-do-grep-ag)
 (global-set-key (kbd "M-x") 'helm-M-x)
 
 ;; Helm-git
