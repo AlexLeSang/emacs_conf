@@ -26,9 +26,9 @@
   (setq ac-sources
 	(append '(ac-source-math-unicode ac-source-math-latex ac-source-latex-commands)
 		ac-sources))
-  )
+ )
 (add-hook 'LaTeX-mode-hook 'ac-LaTeX-mode-setup)
-(global-auto-complete-mode t)
+;;(global-auto-complete-mode t)
 
 (setq ac-math-unicode-in-math-p t)
 

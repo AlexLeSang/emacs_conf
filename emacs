@@ -61,7 +61,8 @@
 (global-set-key (kbd "<f5>") 'compile)
 
 ;; Clang format
-(load "~/.emacs.d/clang/clang-format.el")
+(add-to-list 'load-path "~/.emacs.d/clang")
+(require 'clang-format)
 
 ;; sr-speedbar
 (load-file "~/emacs/sr-speedbar.el")
@@ -84,38 +85,40 @@
 ;;(yas/minor-mode)
 ;;(yas/global-mode)
 
-(add-hook 'c-mode-common-hook '(lambda ()
-				 (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
-				 (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
-				 (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
-				 ))
+;; Company-mode
+(load-file "~/emacs/company-mode.el")
 
-(add-hook 'c++-mode-common-hook '(lambda ()
-				   (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
-				   (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
-				   (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
-				   (setq flycheck-gcc-language-standard "c++11")
-				   ))
+;;(add-hook 'c-mode-common-hook '(lambda ()
+;;        			 (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
+;;        			 (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
+;;        			 (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
+;;        			 ))
+;; 
+;;(add-hook 'c++-mode-common-hook '(lambda ()
+;;        			   (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
+;;        			   (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
+;;        			   (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
+;;        			   (setq flycheck-gcc-language-standard "c++11")
+;;        			   ))
 
 ;; auto-complete
-(ac-config-default)
+;;(ac-config-default)
 
 ;; dirty fix for having AC everywhere
-(define-globalized-minor-mode real-global-auto-complete-mode
-  auto-complete-mode (lambda ()
-		       (if (not (minibufferp (current-buffer)))
-			   (auto-complete-mode 1))
-		       ))
-(real-global-auto-complete-mode t)
-
+;;(define-globalized-minor-mode real-global-auto-complete-mode
+;;  auto-complete-mode (lambda ()
+;;        	       (if (not (minibufferp (current-buffer)))
+;;        		   (auto-complete-mode 1))
+;;        	       ))
+;;(real-global-auto-complete-mode t)
 
 ;; global settings
 (show-paren-mode 1)
 (global-linum-mode t)
 (setq linum-format "%d ")
 (global-hl-line-mode 1)
-;;(set-face-background 'hl-line "#060606")
-;;(set-face-foreground 'highlight nil)
+(set-face-background 'hl-line "#060606")
+(set-face-foreground 'highlight nil)
 
 ;; IDO
 ;;(require 'ido)
@@ -183,8 +186,8 @@
     ((quote
       (flycheck-gcc-include-path
        (list
-	(expand-file-name
-	 ("bii/deps"))))))))
+        (expand-file-name
+         ("bii/deps"))))))))
  '(show-paren-mode t)
  '(tool-bar-mode nil)
  '(tooltip-mode nil)
@@ -216,4 +219,13 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal)))))
+ '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal))))
+ '(company-echo-common ((t (:foreground "white smoke"))))
+ '(company-scrollbar-bg ((t (:inherit company-tooltip :background "dim gray"))))
+ '(company-scrollbar-fg ((t (:background "dim gray"))))
+ '(company-template-field ((t (:background "dark gray" :foreground "white smoke"))))
+ '(company-tooltip ((t (:background "dark gray" :foreground "white smoke"))))
+ '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "red"))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :foreground "red"))))
+ '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :foreground "black"))))
+ '(company-tooltip-selection ((t (:inherit company-tooltip :background "dim gray")))))
