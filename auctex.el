@@ -33,4 +33,4 @@
 (setq ac-math-unicode-in-math-p t)
 
 ;; PDF-LaTeX
-(TeX-global-PDF-mode t)
+(setq TeX-PDF-mode t)
