@@ -114,8 +114,8 @@
 (global-linum-mode t)
 (setq linum-format "%d ")
 (global-hl-line-mode 1)
-;;(set-face-background 'hl-line "#060606")
-;;(set-face-foreground 'highlight nil)
+(set-face-background 'hl-line "#060606")
+(set-face-foreground 'highlight nil)
 
 ;; IDO
 ;;(require 'ido)
