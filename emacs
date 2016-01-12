@@ -88,29 +88,8 @@
 ;; Company-mode
 (load-file "~/emacs/company-mode.el")
 
-;;(add-hook 'c-mode-common-hook '(lambda ()
-;;        			 (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
-;;        			 (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
-;;        			 (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
-;;        			 ))
-;; 
-;;(add-hook 'c++-mode-common-hook '(lambda ()
-;;        			   (add-to-list 'ac-omni-completion-sources (cons "\\." '(ac-source-semantic)))
-;;        			   (add-to-list 'ac-omni-completion-sources (cons "->" '(ac-source-semantic)))
-;;        			   (setq ac-sources '(ac-source-semantic ac-source-yasnippet))
-;;        			   (setq flycheck-gcc-language-standard "c++11")
-;;        			   ))
-
-;; auto-complete
-;;(ac-config-default)
-
-;; dirty fix for having AC everywhere
-;;(define-globalized-minor-mode real-global-auto-complete-mode
-;;  auto-complete-mode (lambda ()
-;;        	       (if (not (minibufferp (current-buffer)))
-;;        		   (auto-complete-mode 1))
-;;        	       ))
-;;(real-global-auto-complete-mode t)
+;; Irony mode
+(load-file "~/emacs/irony.el")
 
 ;; global settings
 (show-paren-mode 1)
@@ -119,10 +98,6 @@
 (global-hl-line-mode 1)
 (set-face-background 'hl-line "#060606")
 (set-face-foreground 'highlight nil)
-
-;; IDO
-;;(require 'ido)
-;;(ido-mode t)
 
 (load-file "~/emacs/auctex.el")
 
