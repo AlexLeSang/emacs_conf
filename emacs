@@ -131,6 +131,19 @@
        '("\\.m$" . octave-mode)
        auto-mode-alist))
 
+;; Python
+(add-to-list 'load-path "~/emacs/emacs.d/pytest-el")
+(require 'pytest)
+(add-hook 'python-mode-hook
+          (lambda ()
+            (local-set-key "\C-ca" 'pytest-all)
+            (local-set-key "\C-cm" 'pytest-module)
+            (local-set-key "\C-c." 'pytest-one)
+            (local-set-key "\C-cd" 'pytest-directory)
+            (local-set-key "\C-cpa" 'pytest-pdb-all)
+            (local-set-key "\C-cpm" 'pytest-pdb-module)
+           (local-set-key "\C-cp." 'pytest-pdb-one)))
+
 ;; Custom variables
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
