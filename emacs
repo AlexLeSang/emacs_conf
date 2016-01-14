@@ -35,6 +35,7 @@
 ;; No tabs
 (setq tab-width 4)
 (setq-default indent-tabs-mode nil)
+(indent-guide-global-mode t)
 
 ;; cua-mode
 (setq cua-enable-cua-keys nil)
