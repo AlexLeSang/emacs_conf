@@ -21,7 +21,7 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-			 ("marmalade" . "https://marmalade-repo.org/packages/"),
+                         ("marmalade" . "https://marmalade-repo.org/packages/"),
                          ("melpa" . "https://melpa.org/packages/")))
 
 (require 'package)
@@ -37,9 +37,12 @@
 (setq-default indent-tabs-mode nil)
 (indent-guide-global-mode t)
 
+(require 'whitespace)
+(global-set-key "\C-c_w" 'whitespace-mode)
+
 ;; cua-mode
 (setq cua-enable-cua-keys nil)
-(global-set-key (kbd "C-x r") 'cua-rectangle-mark-mode) 
+(global-set-key (kbd "C-x r") 'cua-rectangle-mark-mode)
 (cua-mode t)
 
 (when (fboundp 'windmove-default-keybindings)
