@@ -38,7 +38,7 @@
 (indent-guide-global-mode t)
 
 (require 'whitespace)
-(global-set-key "\C-c_w" 'whitespace-mode)
+(global-set-key (kbd "C-c w") 'whitespace-mode)
 
 ;; cua-mode
 (setq cua-enable-cua-keys nil)
@@ -92,9 +92,6 @@
 ;; Company-mode
 (load-file "~/emacs/company-mode.el")
 
-;; Irony mode
-(load-file "~/emacs/irony.el")
-
 ;; global settings
 (show-paren-mode 1)
 (global-linum-mode t)
@@ -108,25 +105,8 @@
 ;; HELM
 (load-file "~/emacs/helm.el")
 
-(add-to-list 'load-path "~/emacs/emacs.d/emacs-helm-gtags")
-
-(require 'helm-gtags)
-(add-hook 'c-mode-hook 'helm-gtags-mode)
-(add-hook 'c++-mode-hook 'helm-gtags-mode)
-(add-hook 'asm-mode-hook 'helm-gtags-mode)
-
-;; Set key bindings
-(eval-after-load "helm-gtags"
-  '(progn
-     (define-key helm-gtags-mode-map (kbd "M-.") 'helm-gtags-dwim)
-     (define-key helm-gtags-mode-map (kbd "M-t") 'helm-gtags-find-tag)
-     (define-key helm-gtags-mode-map (kbd "M-r") 'helm-gtags-find-rtag)
-     (define-key helm-gtags-mode-map (kbd "M-s") 'helm-gtags-find-symbol)
-     (define-key helm-gtags-mode-map (kbd "M-p") 'helm-gtags-find-files)
-     (define-key helm-gtags-mode-map (kbd "M-g M-p") 'helm-gtags-parse-file)
-     (define-key helm-gtags-mode-map (kbd "C-c <") 'helm-gtags-previous-history)
-     (define-key helm-gtags-mode-map (kbd "C-c >") 'helm-gtags-next-history)
-     (define-key helm-gtags-mode-map (kbd "M-,") 'helm-gtags-pop-stack)))
+;; RTags
+(load-file "~/emacs/rtags.el")
 
 ;; Matlab mode
 (setq auto-mode-alist
@@ -202,6 +182,7 @@
    (vector "#839496" "#dc322f" "#859900" "#b58900" "#268bd2" "#d33682" "#2aa198" "#002b36"))
  '(background-color "#002b36")
  '(background-mode dark)
+ '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
  '(custom-enabled-themes (quote (wombat)))

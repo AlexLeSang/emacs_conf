@@ -20,3 +20,5 @@
 (add-to-list 'load-path "~/.emacs.d/helm-descbinds")
 (require 'helm-descbinds)
 (helm-descbinds-mode)
+
+;;(load-file "~/emacs/helm-gtags.el")
