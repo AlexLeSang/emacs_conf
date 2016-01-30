@@ -1,6 +1,7 @@
 (server-start) ;; alias emacs="emacsclient.emacs24 --alternate-editor="" -c"
 
 (tool-bar-mode -1)
+(menu-bar-mode -1)
 
 (add-to-list 'default-frame-alist '(fullscreen . maximized))
 
@@ -21,8 +22,9 @@
 (fset 'yes-or-no-p 'y-or-n-p)
 
 (setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                         ("marmalade" . "https://marmalade-repo.org/packages/"),
-                         ("melpa" . "https://melpa.org/packages/")))
+                         ("marmalade" . "https://marmalade-repo.org/packages/")
+                         ;;("melpa" . "https://melpa.org/packages/")
+			 ))
 
 (require 'package)
 
@@ -51,6 +53,8 @@
 (require 'goto-chg)
 (global-set-key (kbd "M-<left>") 'goto-last-change)
 (global-set-key (kbd "M-<right>") 'goto-last-change-reverse)
+(global-set-key (kbd "M-n") (function flycheck-next-error))
+(global-set-key (kbd "M-p") (function flycheck-previous-error))
 
 ;; CEDET
 (load-file "~/emacs/cedet.el")
@@ -60,9 +64,6 @@
 (add-hook 'after-init-hook #'global-flycheck-mode)
 (setq flycheck-navigation-minimum-level nil)
 (setq flycheck-checker-error-threshold nil)
-
-;; Compile
-(global-set-key (kbd "<f5>") 'compile)
 
 ;; Clang format
 (add-to-list 'load-path "~/.emacs.d/clang")
@@ -107,6 +108,9 @@
 
 ;; RTags
 (load-file "~/emacs/rtags.el")
+
+;; Magit
+(add-to-list 'load-path "~/emacs/emacs.d/")
 
 ;; Matlab mode
 (setq auto-mode-alist
@@ -185,10 +189,10 @@
  '(column-number-mode t)
  '(cua-mode t nil (cua-base))
  '(cursor-color "#839496")
- '(custom-enabled-themes (quote (wombat)))
+ '(custom-enabled-themes (quote (gruber-darker)))
  '(custom-safe-themes
    (quote
-    ("4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "e83c94a6bfab82536cef63610ec58d08dfddd27752d860763055daf58d028aad" "180adb18379d7720859b39124cb6a79b4225d28cef4bfcf4ae2702b199a274c8" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" "a301332a57e8de1b2996ee2d0b2439c18bd0cec9f8cc6ccaa73fac6e239462a8" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" "bf25a2d5c2eddc36b2ee6fc0342201eb04ea090e637562c95b3b6e071216b524" default)))
+    ("16e7c7811fd8f1bc45d17af9677ea3bd8e028fce2dd4f6fa5e6535dea07067b1" "4c9ba94db23a0a3dea88ee80f41d9478c151b07cb6640b33bfc38be7c2415cc4" "fc5fcb6f1f1c1bc01305694c59a1a861b008c534cae8d0e48e4d5e81ad718bc6" "4aee8551b53a43a883cb0b7f3255d6859d766b6c5e14bcb01bed572fcbef4328" "e83c94a6bfab82536cef63610ec58d08dfddd27752d860763055daf58d028aad" "180adb18379d7720859b39124cb6a79b4225d28cef4bfcf4ae2702b199a274c8" "1177fe4645eb8db34ee151ce45518e47cc4595c3e72c55dc07df03ab353ad132" "ace9f12e0c00f983068910d9025eefeb5ea7a711e774ee8bb2af5f7376018ad2" "a301332a57e8de1b2996ee2d0b2439c18bd0cec9f8cc6ccaa73fac6e239462a8" "6cfe5b2f818c7b52723f3e121d1157cf9d95ed8923dbc1b47f392da80ef7495d" "bf25a2d5c2eddc36b2ee6fc0342201eb04ea090e637562c95b3b6e071216b524" default)))
  '(fci-rule-color "#073642")
  '(foreground-color "#839496")
  '(fringe-mode 10 nil (fringe))
@@ -238,12 +242,15 @@
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
  '(default ((t (:family "Droid Sans Mono" :foundry "unknown" :slant normal :weight normal :height 98 :width normal))))
+ '(ace-jump-face-foreground ((t (:foreground "red" :underline nil))))
  '(company-echo-common ((t (:foreground "white smoke"))))
  '(company-scrollbar-bg ((t (:inherit company-tooltip :background "dim gray"))))
  '(company-scrollbar-fg ((t (:background "dim gray"))))
  '(company-template-field ((t (:background "dark gray" :foreground "white smoke"))))
  '(company-tooltip ((t (:background "dark gray" :foreground "white smoke"))))
- '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "red"))))
- '(company-tooltip-common ((t (:inherit company-tooltip :foreground "red"))))
+ '(company-tooltip-annotation ((t (:inherit company-tooltip :foreground "dim gray"))))
+ '(company-tooltip-common ((t (:inherit company-tooltip :foreground "dim gray"))))
  '(company-tooltip-common-selection ((t (:inherit company-tooltip-selection :foreground "black"))))
- '(company-tooltip-selection ((t (:inherit company-tooltip :background "dim gray")))))
+ '(company-tooltip-selection ((t (:inherit company-tooltip :background "dim gray"))))
+ '(helm-grep-match ((t (:foreground "green4"))))
+ '(helm-header-line-left-margin ((t (:background "dark violet" :foreground "black")))))
