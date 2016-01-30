@@ -1,0 +1,15 @@
+*.elc
+*~
+*.yml
+Makefile
+CMake*
+*.edl
+*.txt
+README*
+*.cmake
+*.h
+*.cpp
+*.tgz
+emacs.d/semanticdb
+emacs.d/bookmarks
+emacs.d/ac-comphist.dat
