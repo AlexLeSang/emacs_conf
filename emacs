@@ -103,6 +103,9 @@
 
 (load-file "~/emacs/auctex.el")
 
+;; Projectile
+(load-file "~/emacs/projectile.el")
+
 ;; HELM
 (load-file "~/emacs/helm.el")
 

@@ -22,3 +22,10 @@
 (helm-descbinds-mode)
 
 ;;(load-file "~/emacs/helm-gtags.el")
+
+;;helm-projectile
+(add-to-list 'load-path "~/.emacs.d/helm-projectile")
+(require 'helm-projectile)
+(projectile-global-mode)
+(setq projectile-completion-system 'helm)
+(helm-projectile-on)
