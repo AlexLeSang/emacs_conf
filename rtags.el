@@ -82,4 +82,4 @@
 (define-key global-map (kbd "C-c f") (function rtags-find-symbol))
 (define-key global-map (kbd "C-c x") (function rtags-apply-fixit-at-point))
 
-(setq company-async-timeout 1)
+(setq company-async-timeout 3)

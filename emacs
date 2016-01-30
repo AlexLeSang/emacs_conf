@@ -110,7 +110,7 @@
 (load-file "~/emacs/helm.el")
 
 ;; RTags
-(load-file "~/emacs/rtags.el")
+;;(load-file "~/emacs/rtags.el")
 
 ;; Magit
 (add-to-list 'load-path "~/emacs/emacs.d/")

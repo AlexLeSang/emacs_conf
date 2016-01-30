@@ -21,7 +21,7 @@
 (require 'helm-descbinds)
 (helm-descbinds-mode)
 
-;;(load-file "~/emacs/helm-gtags.el")
+(load-file "~/emacs/helm-gtags.el")
 
 ;;helm-projectile
 (add-to-list 'load-path "~/.emacs.d/helm-projectile")
