@@ -15,8 +15,8 @@
 (add-hook 'after-change-major-mode-hook 'remove-scratch-buffer)
 
 ;; Removes *messages* from the buffer.
-(setq-default message-log-max nil)
-(kill-buffer "*Messages*")
+;;(setq-default message-log-max nil)
+;;(kill-buffer "*Messages*")
 
 ;; No more typing the whole yes or no. Just y or n will do.
 (fset 'yes-or-no-p 'y-or-n-p)
@@ -116,10 +116,16 @@
 (add-to-list 'load-path "~/emacs/emacs.d/")
 
 ;; Matlab mode
+;;(autoload 'octave-mode "octave-mod" nil t)
 (setq auto-mode-alist
-      (cons
-       '("\\.m$" . octave-mode)
-       auto-mode-alist))
+      (cons '("\\.m$" . octave-mode) auto-mode-alist))
+      
+(add-hook 'octave-mode-hook
+          (lambda ()
+            (abbrev-mode 1)
+            (auto-fill-mode 1)
+            (if (eq window-system 'x)
+                (font-lock-mode 1))))
 
 ;; Python
 (add-to-list 'load-path "~/emacs/emacs.d/pytest-el")
